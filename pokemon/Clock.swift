@@ -11,21 +11,23 @@ import UIKit
 class Clock: UIView {
     
     var arcRadius: CGFloat = 25.0 { didSet {setNeedsDisplay()} }
-    var arcDegree: Double = 0.0 { didSet {setNeedsDisplay()} }
+    var arcDegree: Double = -90.0 { didSet {setNeedsDisplay()} }
     var lineWidth: CGFloat = 1.0
     var timer: Timer!
     var second: TimeInterval = 1
     
     func drawArc() {
         let center = CGPoint(x: bounds.width / 2, y: bounds.height / 2)
-        let path = UIBezierPath(arcCenter: center, radius: arcRadius, startAngle: CGFloat((360 - arcDegree).degreesToRadians), endAngle: 0, clockwise: true)
+        let path2 = UIBezierPath(ovalIn: CGRect(origin: CGPoint.zero, size: CGSize(width: 50, height: 50)))
+        path2.addLine(to: center)
+        path2.close()
+        UIColor.gray.setFill()
+        path2.fill()
+        
+        let path = UIBezierPath(arcCenter: center, radius: arcRadius, startAngle: CGFloat((arcDegree).degreesToRadians), endAngle: CGFloat((270).degreesToRadians), clockwise: true)
         path.addLine(to: center)
         path.close()
-        
-        path.lineWidth = lineWidth
         UIColor.black.setFill()
-        UIColor.black.setStroke()
-        path.stroke()
         path.fill()
         setNeedsDisplay()
     }
@@ -41,7 +43,6 @@ class Clock: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
     }
     
     required init?(coder aDecoder: NSCoder) {

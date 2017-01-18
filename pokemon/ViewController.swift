@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let highscore = UserDefaults.standard.object(forKey: "highscore") as! Int?
         if highscore != nil {
             score.text = "\(highscore!)"

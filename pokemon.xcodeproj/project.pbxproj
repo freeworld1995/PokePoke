@@ -776,6 +776,11 @@
 		BF22FCDA1E2D2CC3003873A1 /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22FCD91E2D2CC3003873A1 /* OptionViewController.swift */; };
 		BF3B32771E2E060500CFBAFB /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3B32761E2E060500CFBAFB /* Utils.swift */; };
 		BF4FCA3B1E2F46460089DF28 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4FCA3A1E2F46460089DF28 /* Clock.swift */; };
+		BF4FCA3D1E2FA8BC0089DF28 /* SegueFromRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4FCA3C1E2FA8BC0089DF28 /* SegueFromRight.swift */; };
+		BF4FCA3F1E2FC46B0089DF28 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4FCA3E1E2FC46B0089DF28 /* CustomView.swift */; };
+		BF4FCA411E2FC4A80089DF28 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4FCA401E2FC4A80089DF28 /* CustomButton.swift */; };
+		BF4FCA451E2FC5910089DF28 /* PoplarStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF4FCA431E2FC5910089DF28 /* PoplarStd.otf */; };
+		BF4FCA461E2FC5910089DF28 /* StencilStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF4FCA441E2FC5910089DF28 /* StencilStd.otf */; };
 		BF848ADE1E2D499300AD06F0 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF848ADD1E2D499300AD06F0 /* PlayViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -1558,6 +1563,11 @@
 		BF22FCD91E2D2CC3003873A1 /* OptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
 		BF3B32761E2E060500CFBAFB /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		BF4FCA3A1E2F46460089DF28 /* Clock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
+		BF4FCA3C1E2FA8BC0089DF28 /* SegueFromRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueFromRight.swift; sourceTree = "<group>"; };
+		BF4FCA3E1E2FC46B0089DF28 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		BF4FCA401E2FC4A80089DF28 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		BF4FCA431E2FC5910089DF28 /* PoplarStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PoplarStd.otf; sourceTree = "<group>"; };
+		BF4FCA441E2FC5910089DF28 /* StencilStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = StencilStd.otf; sourceTree = "<group>"; };
 		BF848ADD1E2D499300AD06F0 /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1608,8 +1618,12 @@
 				BF22F6DB1E2CF846003873A1 /* pokemon.m */,
 				BF22F6E11E2CF8A9003873A1 /* pokemon.db */,
 				BF22F6DA1E2CF845003873A1 /* pokemon-Bridging-Header.h */,
+				BF4FCA421E2FC5910089DF28 /* Fonts */,
 				BF22F6E31E2CF8B9003873A1 /* images */,
 				BF3B32761E2E060500CFBAFB /* Utils.swift */,
+				BF4FCA3C1E2FA8BC0089DF28 /* SegueFromRight.swift */,
+				BF4FCA3E1E2FC46B0089DF28 /* CustomView.swift */,
+				BF4FCA401E2FC4A80089DF28 /* CustomButton.swift */,
 			);
 			path = pokemon;
 			sourceTree = "<group>";
@@ -2406,6 +2420,16 @@
 			name = Entity;
 			sourceTree = "<group>";
 		};
+		BF4FCA421E2FC5910089DF28 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BF4FCA431E2FC5910089DF28 /* PoplarStd.otf */,
+				BF4FCA441E2FC5910089DF28 /* StencilStd.otf */,
+			);
+			name = Fonts;
+			path = images/Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2574,6 +2598,7 @@
 				BF22FA981E2CF8BD003873A1 /* Floatzel.png in Resources */,
 				BF22FAB11E2CF8BD003873A1 /* Gigalith.png in Resources */,
 				BF22FBFE1E2CF8BE003873A1 /* Shellos.png in Resources */,
+				BF4FCA461E2FC5910089DF28 /* StencilStd.otf in Resources */,
 				BF22FAD61E2CF8BD003873A1 /* Hariyama.png in Resources */,
 				BF22FA661E2CF8BD003873A1 /* Dratini.png in Resources */,
 				BF22FCD41E2D252C003873A1 /* Background_Gen4@2x.png in Resources */,
@@ -3012,6 +3037,7 @@
 				BF22FBB21E2CF8BE003873A1 /* Popplio.png in Resources */,
 				BF22FA0C1E2CF8BD003873A1 /* Budew.png in Resources */,
 				BF22FA071E2CF8BD003873A1 /* Braviary.png in Resources */,
+				BF4FCA451E2FC5910089DF28 /* PoplarStd.otf in Resources */,
 				BF22FA6E1E2CF8BD003873A1 /* Dunsparce.png in Resources */,
 				BF22FB2C1E2CF8BE003873A1 /* Litwick.png in Resources */,
 				BF22F9D81E2CF8BD003873A1 /* Ampharos.png in Resources */,
@@ -3233,6 +3259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF22F6E01E2CF886003873A1 /* DatabaseManager.swift in Sources */,
+				BF4FCA3F1E2FC46B0089DF28 /* CustomView.swift in Sources */,
 				BF22FCC71E2CFA5B003873A1 /* pokemon.swift in Sources */,
 				BF22FCC31E2CF8FC003873A1 /* FMDatabaseQueue.m in Sources */,
 				BF22F6CB1E2CF837003873A1 /* ViewController.swift in Sources */,
@@ -3243,6 +3270,8 @@
 				BF22FCC21E2CF8FC003873A1 /* FMDatabasePool.m in Sources */,
 				BF22FCC41E2CF8FC003873A1 /* FMResultSet.m in Sources */,
 				BF4FCA3B1E2F46460089DF28 /* Clock.swift in Sources */,
+				BF4FCA3D1E2FA8BC0089DF28 /* SegueFromRight.swift in Sources */,
+				BF4FCA411E2FC4A80089DF28 /* CustomButton.swift in Sources */,
 				BF22F6DC1E2CF846003873A1 /* pokemon.m in Sources */,
 				BF22FCC11E2CF8FC003873A1 /* FMDatabaseAdditions.m in Sources */,
 				BF22FCDA1E2D2CC3003873A1 /* OptionViewController.swift in Sources */,

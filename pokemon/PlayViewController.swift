@@ -55,21 +55,17 @@ class PlayViewController: UIViewController {
         let ac = UIAlertController(title:"Game Over", message: "Your score is \(point)", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default) { [unowned self] _ in
             let vc = self.storyboard!.instantiateViewController(withIdentifier: "mainVC") as! ViewController
-            let navController = UINavigationController(rootViewController: vc)
-            self.present(navController, animated: true)
+//            let navController = UINavigationController(rootViewController: vc)
+            self.present(vc, animated: true)
         })
         present(ac, animated: true)
     }
     
     func setupImage() {
-        front = UIImageView(frame: cardView.bounds)
+        front = UIImageView(frame: CGRect(origin: CGPoint(x: 20, y: 20), size: CGSize(width: cardView.frame.width * 0.8, height: cardView.frame.height * 0.8)))
         front.image = UIImage(named: randAnswers[0].imgURL)?.withRenderingMode(.alwaysTemplate)
-        back = UIImageView(frame: cardView.bounds)
+        back = UIImageView(frame: CGRect(origin: CGPoint(x: 20, y: 20), size: CGSize(width: cardView.frame.width * 0.8, height: cardView.frame.height * 0.8)))
         back.image = UIImage(named: randAnswers[0].imgURL)
-        detail = UILabel(frame: CGRect(origin: back.bounds.origin, size: CGSize(width: 200, height: 50)))
-        detail.font = UIFont(name: "Helvetica", size: 17)
-        detail.text = "\(randAnswers[0].tag) - \(randAnswers[0].name)"
-        back.addSubview(detail)
         cardView.subviews.forEach {
             $0.removeFromSuperview()
         }
@@ -102,7 +98,7 @@ class PlayViewController: UIViewController {
             
             point += 1
             
-            UIView.transition(from: front, to: back, duration: 0.5, options: .transitionFlipFromRight, completion: nil)
+            flipImage()
             
             DispatchQueue.main.asyncAfter(wallDeadline: .now() + 2) { [unowned self] in
                 self.reset()
@@ -117,7 +113,7 @@ class PlayViewController: UIViewController {
                 point -= 1
             }
             
-            UIView.transition(from: front, to: back, duration: 0.5, options: .transitionFlipFromRight, completion: nil)
+            flipImage()
             
             answerButtons.forEach {
                 if $0.titleLabel?.text == randAnswers[0].name {
@@ -129,6 +125,14 @@ class PlayViewController: UIViewController {
                 self.reset()
             }
         }
+    }
+    
+    func flipImage() {
+        UIView.transition(from: front, to: back, duration: 0.5, options: .transitionFlipFromRight, completion: nil)
+        detail = UILabel(frame: CGRect(origin: cardView.bounds.origin, size: CGSize(width: 200, height: 20)))
+        detail.font = UIFont(name: "Helvetica", size: 13)
+        detail.text = "\(randAnswers[0].tag) - \(randAnswers[0].name)"
+        cardView.addSubview(detail)
     }
     
     func changeBackgroundColor() {
