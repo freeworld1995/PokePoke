@@ -12,6 +12,26 @@ class OptionViewController: UIViewController {
 
     
     @IBOutlet var generationButtonColleciton: [UIButton]!
+    @IBOutlet weak var toggleEffect: UISwitch! {
+        didSet {
+            toggleEffect.isOn = AudioManager.shareInstance.toggleEffects
+        }
+    }
+    
+    @IBOutlet weak var toggleMusic: UISwitch! {
+        didSet {
+            toggleMusic.isOn = AudioManager.shareInstance.toggleMusics
+        }
+    }
+    
+    @IBAction func effectToggled(_ sender: UISwitch) {
+        AudioManager.shareInstance.toggleEffects = toggleEffect.isOn
+    }
+    
+
+    @IBAction func musicToggled(_ sender: UISwitch) {
+        AudioManager.shareInstance.toggleMusics = toggleMusic.isOn
+    }
     
     @IBAction func generationPressed(_ sender: UIButton) {
         if sender.alpha == 1.0 {
@@ -39,11 +59,6 @@ class OptionViewController: UIViewController {
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     override func viewWillDisappear(_ animated: Bool) {
         var genArray: [Int] = []
         
@@ -54,5 +69,10 @@ class OptionViewController: UIViewController {
         }
         
         UserDefaults.standard.set(genArray, forKey: "generations")
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 }

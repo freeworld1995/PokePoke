@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -43,10 +43,16 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KUv-Jw-SU5">
                                 <rect key="frame" x="238" y="79" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="effectToggled:" destination="kEU-tN-e1a" eventType="valueChanged" id="DS6-qP-0xR"/>
+                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6gz-uO-YBA">
                                 <rect key="frame" x="238" y="122" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="musicToggled:" destination="kEU-tN-e1a" eventType="valueChanged" id="zpa-Mt-ABe"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GENERATION IN QUIZ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1AL-ah-NSo">
                                 <rect key="frame" x="33" y="181" width="254" height="60"/>
@@ -143,6 +149,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="xmh-cE-uzs"/>
                     <connections>
+                        <outlet property="toggleEffect" destination="KUv-Jw-SU5" id="rGI-gC-Uvh"/>
+                        <outlet property="toggleMusic" destination="6gz-uO-YBA" id="D0j-09-jEN"/>
                         <outletCollection property="generationButtonColleciton" destination="via-QW-hIw" collectionClass="NSMutableArray" id="MaX-a2-if6"/>
                         <outletCollection property="generationButtonColleciton" destination="ncV-Xg-WaV" collectionClass="NSMutableArray" id="Pzy-Uj-Plc"/>
                         <outletCollection property="generationButtonColleciton" destination="SOe-4P-oFK" collectionClass="NSMutableArray" id="JlD-1O-uFb"/>
@@ -188,7 +196,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Icon_Settings"/>
                                         <connections>
-                                            <segue destination="kEU-tN-e1a" kind="show" customClass="SegueFromRight" customModule="pokemon" customModuleProvider="target" id="E1C-xh-fBv"/>
+                                            <segue destination="kEU-tN-e1a" kind="show" identifier="optionSegue" customClass="SegueFromRight" customModule="pokemon" customModuleProvider="target" id="E1C-xh-fBv"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lick em' All" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Paw-eh-pJN">
@@ -250,6 +258,11 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="answerPressed:" destination="tgr-Gr-ylf" eventType="touchUpInside" id="6ZS-XX-PX7"/>
                                 </connections>
@@ -261,6 +274,11 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="answerPressed:" destination="tgr-Gr-ylf" eventType="touchUpInside" id="AC3-6z-HWL"/>
                                 </connections>
@@ -272,6 +290,11 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="answerPressed:" destination="tgr-Gr-ylf" eventType="touchUpInside" id="F6t-ga-EGo"/>
                                 </connections>
@@ -283,6 +306,11 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="answerPressed:" destination="tgr-Gr-ylf" eventType="touchUpInside" id="GJT-Cv-Pto"/>
                                 </connections>
@@ -298,6 +326,12 @@
                                 <rect key="frame" x="39" y="129" width="242" height="142"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZZ-qD-87s">
                                 <rect key="frame" x="24" y="20" width="36" height="36"/>
@@ -313,7 +347,6 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fei-9k-Muj" customClass="Clock" customModule="pokemon" customModuleProvider="target">
                                 <rect key="frame" x="254" y="17" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.65103789881236229" blue="0.88020260428676789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

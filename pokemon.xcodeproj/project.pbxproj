@@ -782,6 +782,14 @@
 		BF4FCA451E2FC5910089DF28 /* PoplarStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF4FCA431E2FC5910089DF28 /* PoplarStd.otf */; };
 		BF4FCA461E2FC5910089DF28 /* StencilStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF4FCA441E2FC5910089DF28 /* StencilStd.otf */; };
 		BF848ADE1E2D499300AD06F0 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF848ADD1E2D499300AD06F0 /* PlayViewController.swift */; };
+		BFAE63691E3F5876000BF88A /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE63681E3F5876000BF88A /* AudioManager.swift */; };
+		BFAE63711E3F679C000BF88A /* 8-Bit-Mayhem.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BFAE636B1E3F679C000BF88A /* 8-Bit-Mayhem.mp3 */; };
+		BFAE63721E3F679C000BF88A /* firered_00A3.wav in Resources */ = {isa = PBXBuildFile; fileRef = BFAE636C1E3F679C000BF88A /* firered_00A3.wav */; };
+		BFAE63731E3F679C000BF88A /* firered_00FA.wav in Resources */ = {isa = PBXBuildFile; fileRef = BFAE636D1E3F679C000BF88A /* firered_00FA.wav */; };
+		BFAE63741E3F679C000BF88A /* Quirky-Puzzle-Game-Menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BFAE636E1E3F679C000BF88A /* Quirky-Puzzle-Game-Menu.mp3 */; };
+		BFAE63751E3F679C000BF88A /* UIClick.wav in Resources */ = {isa = PBXBuildFile; fileRef = BFAE636F1E3F679C000BF88A /* UIClick.wav */; };
+		BFAE63761E3F679C000BF88A /* UIToggle.wav in Resources */ = {isa = PBXBuildFile; fileRef = BFAE63701E3F679C000BF88A /* UIToggle.wav */; };
+		BFAE63781E3F6814000BF88A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE63771E3F6814000BF88A /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1569,6 +1577,14 @@
 		BF4FCA431E2FC5910089DF28 /* PoplarStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PoplarStd.otf; sourceTree = "<group>"; };
 		BF4FCA441E2FC5910089DF28 /* StencilStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = StencilStd.otf; sourceTree = "<group>"; };
 		BF848ADD1E2D499300AD06F0 /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+		BFAE63681E3F5876000BF88A /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		BFAE636B1E3F679C000BF88A /* 8-Bit-Mayhem.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "8-Bit-Mayhem.mp3"; sourceTree = "<group>"; };
+		BFAE636C1E3F679C000BF88A /* firered_00A3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = firered_00A3.wav; sourceTree = "<group>"; };
+		BFAE636D1E3F679C000BF88A /* firered_00FA.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = firered_00FA.wav; sourceTree = "<group>"; };
+		BFAE636E1E3F679C000BF88A /* Quirky-Puzzle-Game-Menu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Quirky-Puzzle-Game-Menu.mp3"; sourceTree = "<group>"; };
+		BFAE636F1E3F679C000BF88A /* UIClick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = UIClick.wav; sourceTree = "<group>"; };
+		BFAE63701E3F679C000BF88A /* UIToggle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = UIToggle.wav; sourceTree = "<group>"; };
+		BFAE63771E3F6814000BF88A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1587,6 +1603,7 @@
 			isa = PBXGroup;
 			children = (
 				BF22F6C71E2CF837003873A1 /* pokemon */,
+				BFAE636A1E3F679C000BF88A /* Sounds */,
 				BF22F6C61E2CF837003873A1 /* Products */,
 				BF22FCB01E2CF8D5003873A1 /* Frameworks */,
 			);
@@ -1603,27 +1620,19 @@
 		BF22F6C71E2CF837003873A1 /* pokemon */ = {
 			isa = PBXGroup;
 			children = (
+				BF2C05371E41BB5D002D9DB1 /* Controller */,
+				BF2C05361E41BB44002D9DB1 /* View */,
 				BF22FCB31E2CF8FC003873A1 /* fmdb */,
-				BF22F6C81E2CF837003873A1 /* AppDelegate.swift */,
-				BF22F6CA1E2CF837003873A1 /* ViewController.swift */,
-				BF4FCA3A1E2F46460089DF28 /* Clock.swift */,
-				BF22F6DF1E2CF886003873A1 /* DatabaseManager.swift */,
-				BF22FCD91E2D2CC3003873A1 /* OptionViewController.swift */,
-				BF848ADD1E2D499300AD06F0 /* PlayViewController.swift */,
+				BF2C05381E41BB79002D9DB1 /* Database */,
+				BF2C05391E41BB86002D9DB1 /* Supporting Files */,
 				BF22FCC81E2CFA61003873A1 /* Entity */,
-				BF22F6DD1E2CF874003873A1 /* Main.storyboard */,
-				BF22F6CF1E2CF837003873A1 /* Assets.xcassets */,
-				BF22F6D11E2CF837003873A1 /* LaunchScreen.storyboard */,
-				BF22F6D41E2CF837003873A1 /* Info.plist */,
-				BF22F6DB1E2CF846003873A1 /* pokemon.m */,
-				BF22F6E11E2CF8A9003873A1 /* pokemon.db */,
-				BF22F6DA1E2CF845003873A1 /* pokemon-Bridging-Header.h */,
+				BF2C053A1E41BBAA002D9DB1 /* Segue */,
 				BF4FCA421E2FC5910089DF28 /* Fonts */,
 				BF22F6E31E2CF8B9003873A1 /* images */,
-				BF3B32761E2E060500CFBAFB /* Utils.swift */,
-				BF4FCA3C1E2FA8BC0089DF28 /* SegueFromRight.swift */,
-				BF4FCA3E1E2FC46B0089DF28 /* CustomView.swift */,
-				BF4FCA401E2FC4A80089DF28 /* CustomButton.swift */,
+				BF2C053B1E41BBCA002D9DB1 /* Utils */,
+				BFAE63681E3F5876000BF88A /* AudioManager.swift */,
+				BF22F6DD1E2CF874003873A1 /* Main.storyboard */,
+				BF22F6CF1E2CF837003873A1 /* Assets.xcassets */,
 			);
 			path = pokemon;
 			sourceTree = "<group>";
@@ -2420,6 +2429,64 @@
 			name = Entity;
 			sourceTree = "<group>";
 		};
+		BF2C05361E41BB44002D9DB1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF4FCA3A1E2F46460089DF28 /* Clock.swift */,
+				BF4FCA3E1E2FC46B0089DF28 /* CustomView.swift */,
+				BF4FCA401E2FC4A80089DF28 /* CustomButton.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BF2C05371E41BB5D002D9DB1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF22F6CA1E2CF837003873A1 /* ViewController.swift */,
+				BF22FCD91E2D2CC3003873A1 /* OptionViewController.swift */,
+				BF848ADD1E2D499300AD06F0 /* PlayViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		BF2C05381E41BB79002D9DB1 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				BF22F6DF1E2CF886003873A1 /* DatabaseManager.swift */,
+				BF22F6DB1E2CF846003873A1 /* pokemon.m */,
+				BF22F6E11E2CF8A9003873A1 /* pokemon.db */,
+				BF22F6DA1E2CF845003873A1 /* pokemon-Bridging-Header.h */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		BF2C05391E41BB86002D9DB1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF22F6C81E2CF837003873A1 /* AppDelegate.swift */,
+				BF22F6D11E2CF837003873A1 /* LaunchScreen.storyboard */,
+				BF22F6D41E2CF837003873A1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BF2C053A1E41BBAA002D9DB1 /* Segue */ = {
+			isa = PBXGroup;
+			children = (
+				BF4FCA3C1E2FA8BC0089DF28 /* SegueFromRight.swift */,
+			);
+			name = Segue;
+			sourceTree = "<group>";
+		};
+		BF2C053B1E41BBCA002D9DB1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BF3B32761E2E060500CFBAFB /* Utils.swift */,
+				BFAE63771E3F6814000BF88A /* Constants.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		BF4FCA421E2FC5910089DF28 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -2428,6 +2495,19 @@
 			);
 			name = Fonts;
 			path = images/Fonts;
+			sourceTree = "<group>";
+		};
+		BFAE636A1E3F679C000BF88A /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				BFAE636B1E3F679C000BF88A /* 8-Bit-Mayhem.mp3 */,
+				BFAE636C1E3F679C000BF88A /* firered_00A3.wav */,
+				BFAE636D1E3F679C000BF88A /* firered_00FA.wav */,
+				BFAE636E1E3F679C000BF88A /* Quirky-Puzzle-Game-Menu.mp3 */,
+				BFAE636F1E3F679C000BF88A /* UIClick.wav */,
+				BFAE63701E3F679C000BF88A /* UIToggle.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2549,6 +2629,7 @@
 				BF22FA371E2CF8BD003873A1 /* Cobalion.png in Resources */,
 				BF22FCD51E2D252C003873A1 /* Background_Gen5@2x.png in Resources */,
 				BF22FA9E1E2CF8BD003873A1 /* Fraxure.png in Resources */,
+				BFAE63761E3F679C000BF88A /* UIToggle.wav in Resources */,
 				BF22FCA81E2CF8BF003873A1 /* Zebstrika.png in Resources */,
 				BF22FBF41E2CF8BE003873A1 /* Sentret.png in Resources */,
 				BF22FAB01E2CF8BD003873A1 /* Gible.png in Resources */,
@@ -2612,6 +2693,7 @@
 				BF22FABD1E2CF8BD003873A1 /* Golduck.png in Resources */,
 				BF22FA831E2CF8BD003873A1 /* Entei.png in Resources */,
 				BF22FC511E2CF8BF003873A1 /* Terrakion.png in Resources */,
+				BFAE63751E3F679C000BF88A /* UIClick.wav in Resources */,
 				BF22FC1F1E2CF8BF003873A1 /* Snorunt.png in Resources */,
 				BF22FA091E2CF8BD003873A1 /* Bronzong.png in Resources */,
 				BF22FCC51E2CF8FC003873A1 /* Info.plist in Resources */,
@@ -2633,6 +2715,7 @@
 				BF22FB991E2CF8BE003873A1 /* Pelipper.png in Resources */,
 				BF22FBE61E2CF8BE003873A1 /* Sawsbuck.png in Resources */,
 				BF22FC261E2CF8BF003873A1 /* Spewpa.png in Resources */,
+				BFAE63711E3F679C000BF88A /* 8-Bit-Mayhem.mp3 in Resources */,
 				BF22FA2C1E2CF8BD003873A1 /* Chinchou.png in Resources */,
 				BF22FC5C1E2CF8BF003873A1 /* Tornadus.png in Resources */,
 				BF22FA581E2CF8BD003873A1 /* Dialga.png in Resources */,
@@ -3076,6 +3159,7 @@
 				BF22FBC51E2CF8BE003873A1 /* Ralts.png in Resources */,
 				BF22FAF61E2CF8BD003873A1 /* Jellicent.png in Resources */,
 				BF22FAB51E2CF8BD003873A1 /* Glalie.png in Resources */,
+				BFAE63721E3F679C000BF88A /* firered_00A3.wav in Resources */,
 				BF22FB6D1E2CF8BE003873A1 /* Moltres.png in Resources */,
 				BF22FA941E2CF8BD003873A1 /* Flabele.png in Resources */,
 				BF22FC751E2CF8BF003873A1 /* Vanilluxe.png in Resources */,
@@ -3156,6 +3240,7 @@
 				BF22FA6D1E2CF8BD003873A1 /* Dugtrio.png in Resources */,
 				BF22FAD21E2CF8BD003873A1 /* Gulpin.png in Resources */,
 				BF22FB771E2CF8BE003873A1 /* Natu.png in Resources */,
+				BFAE63731E3F679C000BF88A /* firered_00FA.wav in Resources */,
 				BF22FA7C1E2CF8BD003873A1 /* Electrike.png in Resources */,
 				BF22FB0B1E2CF8BE003873A1 /* Klink.png in Resources */,
 				BF22FB591E2CF8BE003873A1 /* Meloetta.png in Resources */,
@@ -3213,6 +3298,7 @@
 				BF22FA191E2CF8BD003873A1 /* Carvanha.png in Resources */,
 				BF22FA5B1E2CF8BD003873A1 /* Diglett.png in Resources */,
 				BF22FB5B1E2CF8BE003873A1 /* Meowth.png in Resources */,
+				BFAE63741E3F679C000BF88A /* Quirky-Puzzle-Game-Menu.mp3 in Resources */,
 				BF22FA601E2CF8BD003873A1 /* Doublade.png in Resources */,
 				BF22F9FD1E2CF8BD003873A1 /* Binacle.png in Resources */,
 				BF22FBBD1E2CF8BE003873A1 /* Purugly.png in Resources */,
@@ -3259,11 +3345,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF22F6E01E2CF886003873A1 /* DatabaseManager.swift in Sources */,
+				BFAE63781E3F6814000BF88A /* Constants.swift in Sources */,
 				BF4FCA3F1E2FC46B0089DF28 /* CustomView.swift in Sources */,
 				BF22FCC71E2CFA5B003873A1 /* pokemon.swift in Sources */,
 				BF22FCC31E2CF8FC003873A1 /* FMDatabaseQueue.m in Sources */,
 				BF22F6CB1E2CF837003873A1 /* ViewController.swift in Sources */,
 				BF848ADE1E2D499300AD06F0 /* PlayViewController.swift in Sources */,
+				BFAE63691E3F5876000BF88A /* AudioManager.swift in Sources */,
 				BF3B32771E2E060500CFBAFB /* Utils.swift in Sources */,
 				BF22F6C91E2CF837003873A1 /* AppDelegate.swift in Sources */,
 				BF22FCC01E2CF8FC003873A1 /* FMDatabase.m in Sources */,

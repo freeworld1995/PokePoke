@@ -21,13 +21,13 @@ class Clock: UIView {
         let path2 = UIBezierPath(ovalIn: CGRect(origin: CGPoint.zero, size: CGSize(width: 50, height: 50)))
         path2.addLine(to: center)
         path2.close()
-        UIColor.gray.setFill()
+        UIColor.white.setFill()
         path2.fill()
         
         let path = UIBezierPath(arcCenter: center, radius: arcRadius, startAngle: CGFloat((arcDegree).degreesToRadians), endAngle: CGFloat((270).degreesToRadians), clockwise: true)
         path.addLine(to: center)
         path.close()
-        UIColor.black.setFill()
+        UIColor.gray.setFill()
         path.fill()
         setNeedsDisplay()
     }

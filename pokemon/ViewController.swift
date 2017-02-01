@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -21,11 +22,23 @@ class ViewController: UIViewController {
             score.text = "0"
         }
         
+        //        let path = Bundle.main.path(forResource: Sound.background, ofType: "mp3")
+        //        let url = URL(string: path!)
+        //        audio = try! AVAudioPlayer(contentsOf: url!)
+        //        audio.play()
+        
+        AudioManager.shareInstance.background.play()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier != "optionSegue" {
+                    AudioManager.shareInstance.background.stop()
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
     }
     
     

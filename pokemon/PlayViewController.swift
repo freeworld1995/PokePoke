@@ -39,8 +39,14 @@ class PlayViewController: UIViewController {
         changeBackgroundColor()
         setupImage()
         setupAnswers()
-        
+        if AudioManager.shareInstance.toggleMusics {
+            AudioManager.shareInstance.play.play()
+        }
         timer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(endGame), userInfo: nil, repeats: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        AudioManager.shareInstance.play.stop()
     }
     
     func endGame() {
@@ -55,7 +61,7 @@ class PlayViewController: UIViewController {
         let ac = UIAlertController(title:"Game Over", message: "Your score is \(point)", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default) { [unowned self] _ in
             let vc = self.storyboard!.instantiateViewController(withIdentifier: "mainVC") as! ViewController
-//            let navController = UINavigationController(rootViewController: vc)
+            //            let navController = UINavigationController(rootViewController: vc)
             self.present(vc, animated: true)
         })
         present(ac, animated: true)
@@ -94,6 +100,8 @@ class PlayViewController: UIViewController {
     @IBAction func answerPressed(_ sender: UIButton) {
         
         if sender.titleLabel?.text == randAnswers[0].name {
+            AudioManager.shareInstance.correct.play()
+            
             sender.backgroundColor = UIColor.green
             
             point += 1
@@ -105,6 +113,7 @@ class PlayViewController: UIViewController {
             }
             
         } else {
+            AudioManager.shareInstance.wrong.play()
             sender.backgroundColor = UIColor.red
             
             if point == 0 {
