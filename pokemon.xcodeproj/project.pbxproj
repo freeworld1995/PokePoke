@@ -782,6 +782,7 @@
 		BF4FCA451E2FC5910089DF28 /* PoplarStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF4FCA431E2FC5910089DF28 /* PoplarStd.otf */; };
 		BF4FCA461E2FC5910089DF28 /* StencilStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = BF4FCA441E2FC5910089DF28 /* StencilStd.otf */; };
 		BF848ADE1E2D499300AD06F0 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF848ADD1E2D499300AD06F0 /* PlayViewController.swift */; };
+		BFAA70C51E5AB59000036C72 /* TriangleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA70C41E5AB59000036C72 /* TriangleTransition.swift */; };
 		BFAE63691E3F5876000BF88A /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE63681E3F5876000BF88A /* AudioManager.swift */; };
 		BFAE63711E3F679C000BF88A /* 8-Bit-Mayhem.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BFAE636B1E3F679C000BF88A /* 8-Bit-Mayhem.mp3 */; };
 		BFAE63721E3F679C000BF88A /* firered_00A3.wav in Resources */ = {isa = PBXBuildFile; fileRef = BFAE636C1E3F679C000BF88A /* firered_00A3.wav */; };
@@ -1577,6 +1578,7 @@
 		BF4FCA431E2FC5910089DF28 /* PoplarStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PoplarStd.otf; sourceTree = "<group>"; };
 		BF4FCA441E2FC5910089DF28 /* StencilStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = StencilStd.otf; sourceTree = "<group>"; };
 		BF848ADD1E2D499300AD06F0 /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+		BFAA70C41E5AB59000036C72 /* TriangleTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleTransition.swift; sourceTree = "<group>"; };
 		BFAE63681E3F5876000BF88A /* AudioManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		BFAE636B1E3F679C000BF88A /* 8-Bit-Mayhem.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "8-Bit-Mayhem.mp3"; sourceTree = "<group>"; };
 		BFAE636C1E3F679C000BF88A /* firered_00A3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = firered_00A3.wav; sourceTree = "<group>"; };
@@ -1633,6 +1635,7 @@
 				BFAE63681E3F5876000BF88A /* AudioManager.swift */,
 				BF22F6DD1E2CF874003873A1 /* Main.storyboard */,
 				BF22F6CF1E2CF837003873A1 /* Assets.xcassets */,
+				BFAA70C41E5AB59000036C72 /* TriangleTransition.swift */,
 			);
 			path = pokemon;
 			sourceTree = "<group>";
@@ -3360,6 +3363,7 @@
 				BF4FCA3B1E2F46460089DF28 /* Clock.swift in Sources */,
 				BF4FCA3D1E2FA8BC0089DF28 /* SegueFromRight.swift in Sources */,
 				BF4FCA411E2FC4A80089DF28 /* CustomButton.swift in Sources */,
+				BFAA70C51E5AB59000036C72 /* TriangleTransition.swift in Sources */,
 				BF22F6DC1E2CF846003873A1 /* pokemon.m in Sources */,
 				BF22FCC11E2CF8FC003873A1 /* FMDatabaseAdditions.m in Sources */,
 				BF22FCDA1E2D2CC3003873A1 /* OptionViewController.swift in Sources */,

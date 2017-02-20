@@ -341,7 +341,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="a2s-Kr-pM8"/>
+                                    <action selector="backButtonPressed:" destination="tgr-Gr-ylf" eventType="touchUpInside" id="wcT-IE-ZSp"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fei-9k-Muj" customClass="Clock" customModule="pokemon" customModuleProvider="target">
@@ -363,7 +363,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2WX-QE-mRo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4875" y="-62.323943661971832"/>
+            <point key="canvasLocation" x="5378" y="-83"/>
         </scene>
     </scenes>
     <resources>
@@ -376,7 +376,4 @@
         <image name="Button_Play" width="459" height="458"/>
         <image name="Icon_Settings" width="100" height="100"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="a2s-Kr-pM8"/>
-    </inferredMetricsTieBreakers>
 </document>
